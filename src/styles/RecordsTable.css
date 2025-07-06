@@ -1,0 +1,21 @@
+.records-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.trophy-icon {
+  width: 28px;
+  height: 28px;
+}
+.leaderboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}

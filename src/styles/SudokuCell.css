@@ -1,0 +1,148 @@
+.sudoku-cell {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sudoku-cell:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.sudoku-cell.draft-mode {
+  background: #f8f9fa;
+  border-color: #6c757d;
+}
+
+.cell-error {
+  background: red;
+  border-color: #f44336;
+}
+
+.cell-prefilled {
+  background: black;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.prefilled-value {
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.2rem;
+  background: transparent;
+  outline: none;
+  font-weight: 500;
+}
+
+.drafts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.draft-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 0.6rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.1s ease;
+  opacity: 0.4;
+  color: #666;
+}
+
+.draft-number:hover {
+  background: rgba(0, 123, 255, 0.1);
+  opacity: 0.7;
+}
+
+.draft-number.active {
+  opacity: 1;
+  font-weight: bold;
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.toggle-draft-btn {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+
+  font-size: 0.5rem;
+  padding: 0px 2px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+
+  transform: scale(0.8);
+}
+
+.toggle-draft-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.toggle-draft-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  opacity: 1;
+}
+
+.sudoku-cell.cell-animate {
+  animation: pop 0.2s;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .sudoku-cell {
+    width: 9vw;
+    height: 9vw;
+    font-size: 1rem;
+  }
+
+  .draft-number {
+    font-size: 0.5rem;
+  }
+
+  .toggle-draft-btn {
+    font-size: 0.6rem;
+  }
+}
