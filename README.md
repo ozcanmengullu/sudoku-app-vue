@@ -14,12 +14,21 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
+### To enter draft mode
+
+```sh
+You can press the 'd' or 'D' keys on the keyboard while in the relevant square. Or you can turn it on and off by pressing the pencil sign in the corners.
+```
 ## Project Setup
 
 ```sh
 npm install
 ```
+### Back-end setup
 
+```sh
+docker-compose up backend mongo
+```
 ### Compile and Hot-Reload for Development
 
 ```sh
